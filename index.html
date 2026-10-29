@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holley's Bar-B-Q | Ribs on Moncrief Rd • Jacksonville</title>
+<meta name="description" content="Holley's Bar-B-Q, 3604 Moncrief Rd, Jacksonville. Ribs, rib tips, slabs, wings, burgers and homemade desserts. Call (904) 768-5698.">
+<meta name="theme-color" content="#1e73be">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="images/hero.jpg">
+<style>
+:root{--blue:#1e73be;--navy:#0f3d66;--red:#d62828;--cream:#fdf6e9;--ink:#1d1a16;--char:#2a2420}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55;padding-bottom:78px}
+.slab{font-family:"Alfa Slab One",Georgia,serif;font-weight:400;letter-spacing:.5px}
+header{background:var(--blue);color:#fff;padding:.75rem 1.2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;box-shadow:0 2px 0 var(--red)}
+.logo{font-family:"Alfa Slab One",Georgia,serif;font-size:1.45rem;line-height:1;color:#fff;text-decoration:none;text-shadow:2px 2px 0 var(--red)}
+.logo small{display:block;font-family:system-ui,sans-serif;font-size:.62rem;letter-spacing:3px;text-transform:uppercase;text-shadow:none;opacity:.9;margin-top:3px}
+nav a{color:#fff;text-decoration:none;margin-left:1.1rem;font-weight:600;font-size:.92rem}nav a:hover{color:#ffd7d7}
+.pill{background:#fff;color:var(--blue);font-weight:800;font-size:.75rem;padding:.35rem .7rem;border-radius:99px;white-space:nowrap}
+.pill.closed{color:var(--red)}
+.hero{position:relative;min-height:78vh;background:#222 url(images/hero.jpg) center 55%/cover no-repeat;display:flex;align-items:flex-end;color:#fff}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,61,102,.15) 0%,rgba(15,30,50,.25) 40%,rgba(20,14,10,.92) 100%)}
+.hero-in{position:relative;padding:2rem 1.3rem 2.2rem;width:100%;max-width:1100px;margin:0 auto}
+.kicker{display:inline-block;background:var(--red);color:#fff;font-weight:800;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;padding:.3rem .65rem;border-radius:3px;margin-bottom:.7rem}
+.hero h2{font-family:"Alfa Slab One",Georgia,serif;font-weight:400;font-size:clamp(2.3rem,9vw,4.4rem);line-height:1.02;text-shadow:3px 3px 0 rgba(214,40,40,.85)}
+.hero p{font-size:1.1rem;margin:.7rem 0 1.2rem;max-width:34rem;opacity:.95}
+.cta-row{display:flex;gap:.6rem;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:.4rem;padding:.85rem 1.2rem;border-radius:8px;font-weight:800;text-decoration:none;font-size:1rem}
+.btn.red{background:var(--red);color:#fff}.btn.white{background:#fff;color:var(--navy)}.btn.blue{background:var(--blue);color:#fff}
+.ticker{background:var(--char);color:#fff;overflow:hidden;white-space:nowrap;font-weight:800;letter-spacing:2px;font-size:.85rem;text-transform:uppercase}
+.ticker div{display:inline-block;padding:.7rem 0;animation:tick 28s linear infinite}
+.ticker span{margin:0 1.2rem}.ticker b{color:var(--red)}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.ticker div{animation:none}}
+section{padding:3.2rem 1.2rem;max-width:1100px;margin:0 auto}
+h3{font-family:"Alfa Slab One",Georgia,serif;font-weight:400;font-size:clamp(1.7rem,6vw,2.3rem);color:var(--navy);line-height:1.1;margin-bottom:.4rem}
+.sub{color:#6b5d50;margin-bottom:1.4rem}
+.center{text-align:center}
+.filters{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:1.2rem;scrollbar-width:none;position:sticky;top:58px;background:var(--cream);z-index:50;padding-top:8px}
+.filters::-webkit-scrollbar{display:none}
+.filters button{flex:0 0 auto;padding:9px 16px;border:2px solid var(--navy);background:#fff;border-radius:99px;cursor:pointer;font-weight:800;color:var(--navy);font-size:.9rem}
+.filters button.active{background:var(--red);border-color:var(--red);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 0 #e7dccb,0 6px 18px rgba(40,30,20,.06);cursor:pointer;transition:transform .15s}
+.card:active{transform:scale(.985)}
+.card .ph{position:relative}
+.card img{width:100%;height:180px;object-fit:cover;display:block}
+.card .tag{position:absolute;left:10px;top:10px;background:var(--blue);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:.25rem .5rem;border-radius:3px}
+.card-body{padding:.9rem 1rem 1rem}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:.6rem}
+.card h4{font-size:1.08rem;line-height:1.25}
+.price{color:var(--red);font-weight:900;white-space:nowrap;font-size:.98rem}
+.card p.d{color:#5d5246;font-size:.92rem;margin-top:.25rem}
+.more{display:none;font-size:.88rem;color:#4a4036;margin-top:.6rem;padding-top:.6rem;border-top:1px dashed #e0d4c2}
+.card.open .more{display:block}
+.tap{font-size:.72rem;color:#a0907e;margin-top:.45rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+.card.open .tap{display:none}
+.noimg{height:180px;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(135deg,var(--blue) 0 18px,#2a80cc 18px 36px);color:#fff;font-family:"Alfa Slab One",serif;font-size:1.6rem;text-shadow:2px 2px 0 var(--red)}
+.heritage{background:var(--navy);color:#fff;border-radius:16px;overflow:hidden}
+.heritage img{width:100%;display:block;filter:sepia(.25) contrast(1.05)}
+.heritage>div{padding:1.6rem 1.4rem 1.8rem}
+.heritage h3{color:#fff}.heritage p{opacity:.92;margin-top:.6rem}
+.heritage .st{display:flex;gap:1.4rem;margin-top:1.2rem;flex-wrap:wrap}
+.heritage .st b{display:block;font-family:"Alfa Slab One",serif;font-weight:400;font-size:1.5rem;color:#ffd166}
+.heritage .st span{font-size:.8rem;opacity:.8;text-transform:uppercase;letter-spacing:1px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem}
+.gallery img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;display:block}
+.gallery img.wide{grid-column:span 2;aspect-ratio:2/1}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.box{background:#fff;border-radius:12px;padding:1.3rem;box-shadow:0 2px 0 #e7dccb}
+.box strong{display:block;font-family:"Alfa Slab One",serif;font-weight:400;color:var(--navy);font-size:1.2rem;margin-bottom:.5rem}
+.box table{width:100%;border-collapse:collapse}.box td{padding:.3rem 0;border-bottom:1px solid #f1e8da}.box td:last-child{text-align:right}
+.box tr.today td{font-weight:900;color:var(--red)}
+#status{display:inline-block;margin-top:.8rem;font-weight:900}
+.box .btn{margin-top:.9rem}
+.compare{background:#fff;border:3px solid var(--blue);border-radius:14px;padding:1.4rem}
+.compare ul{list-style:none;margin-top:.8rem;display:grid;gap:.5rem}
+.compare li{padding-left:1.6rem;position:relative}.compare li::before{content:"✓";position:absolute;left:0;color:var(--red);font-weight:900}
+.call-bar{position:fixed;bottom:0;left:0;right:0;z-index:200;display:flex;gap:.5rem;padding:.6rem .7rem calc(.6rem + env(safe-area-inset-bottom));background:rgba(15,61,102,.97);box-shadow:0 -4px 14px rgba(0,0,0,.25)}
+.call-bar a{flex:1;text-align:center;padding:.8rem .5rem;border-radius:9px;font-weight:900;text-decoration:none;font-size:1.02rem}
+.call-bar .c{background:var(--red);color:#fff;flex:2}.call-bar .m{background:#fff;color:var(--navy)}
+footer{background:var(--char);color:#d8cfc3;text-align:center;padding:2rem 1rem;font-size:.88rem}
+footer .slab{color:#fff;font-size:1.3rem;text-shadow:2px 2px 0 var(--red)}
+@media(min-width:760px){.heritage{display:grid;grid-template-columns:1.2fr 1fr;align-items:center}.heritage img{height:100%;object-fit:cover}.gallery{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:700px){nav{display:none}.visit{grid-template-columns:1fr}}
+.call-bar a{white-space:nowrap}.call-bar .c{flex:1 1 auto!important}.call-bar .m{flex:0 0 auto!important;padding-left:1.1rem;padding-right:1.1rem}
+@media(max-width:360px){.call-bar a{font-size:.9rem}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#top">HOLLEY'S<small>Bar-B-Q • Moncrief Rd</small></a>
+  <nav><a href="#menu">Menu</a><a href="#story">Our Story</a><a href="#visit">Visit</a></nav>
+  <span class="pill" id="pill">…</span>
+</header>
+
+<div class="hero" id="top" role="img" aria-label="Holley's Bar-B-Q blue building on Moncrief Road">
+  <div class="hero-in">
+    <span class="kicker">Jacksonville • Moncrief Rd</span>
+    <h2>Ribs, Tips<br>&amp; Sauce.</h2>
+    <p>Slabs off the pit, plates piled with Curly Q fries, and homemade blue cake for dessert. Serving Jacksonville for generations.</p>
+    <div class="cta-row">
+      <a class="btn red" href="tel:9047685698">📞 Call to Order</a>
+      <a class="btn white" href="#menu">See the Menu</a>
+    </div>
+  </div>
+</div>
+
+<div class="ticker" aria-hidden="true"><div>
+  <span>Rib Plates</span><b>★</b><span>Rib Tips</span><b>★</b><span>Full &amp; Half Slabs</span><b>★</b><span>Wings</span><b>★</b><span>Curly Q Fries</span><b>★</b><span>Mac &amp; Cheese</span><b>★</b><span>Blue Cake</span><b>★</b><span>Sweet Potato Pie</span><b>★</b>
+  <span>Rib Plates</span><b>★</b><span>Rib Tips</span><b>★</b><span>Full &amp; Half Slabs</span><b>★</b><span>Wings</span><b>★</b><span>Curly Q Fries</span><b>★</b><span>Mac &amp; Cheese</span><b>★</b><span>Blue Cake</span><b>★</b><span>Sweet Potato Pie</span><b>★</b>
+</div></div>
+
+<section id="menu">
+  <h3>The Menu</h3>
+  <p class="sub">Tap any item for details. Prices are ranges; call for today's prices.</p>
+  <div class="filters" role="tablist">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="ribs">Ribs</button>
+    <button data-filter="chicken">Chicken</button>
+    <button data-filter="burgers">Burgers &amp; Sides</button>
+    <button data-filter="sweets">Desserts</button>
+  </div>
+  <div class="grid" id="menu-grid">
+    <div class="card" data-cat="ribs"><div class="ph"><img src="images/ribs.jpg" alt="Holley's sauced ribs" loading="lazy"><span class="tag">Signature</span></div>
+      <div class="card-body"><div class="row"><h4>Rib Plate</h4><span class="price">$10 – $14</span></div><p class="d">Ribs plated with your sides.</p>
+      <div class="more">Call (904) 768-5698 to ask about today's sides and sizes.</div><p class="tap">Tap for details</p></div></div>
+    <div class="card" data-cat="ribs"><div class="ph"><img src="images/rib-tips.jpg" alt="Rib tips with Curly Q fries" loading="lazy"></div>
+      <div class="card-body"><div class="row"><h4>Rib Tips</h4><span class="price">$10 – $13.50</span></div><p class="d">Meaty, saucy tips, often served with Curly Q fries.</p>
+      <div class="more">A local favorite. Call ahead and it'll be ready when you pull up.</div><p class="tap">Tap for details</p></div></div>
+    <div class="card" data-cat="ribs"><div class="ph"><img src="images/ribs-grill.jpg" alt="Slabs of ribs on the pit" loading="lazy"><span class="tag">Feeds a crew</span></div>
+      <div class="card-body"><div class="row"><h4>Full Slab</h4><span class="price">$25 – $32</span></div><p class="d">The whole rack, straight off the pit.</p>
+      <div class="more">Feeding the family or the cookout? Call ahead for multiple slabs.</div><p class="tap">Tap for details</p></div></div>
+    <div class="card" data-cat="ribs"><div class="ph"><img src="images/ribs-grill.jpg" alt="Ribs cooking on the pit" loading="lazy" style="object-position:right"></div>
+      <div class="card-body"><div class="row"><h4>Half Slab</h4><span class="price">$15 – $18</span></div><p class="d">Half a rack for one big appetite.</p>
+      <div class="more">Ask for extra sauce on the side.</div><p class="tap">Tap for details</p></div></div>
+    <div class="card" data-cat="chicken"><div class="ph"><img src="images/wings-sauce.jpg" alt="Sauced wings over Curly Q fries" loading="lazy"></div>
+      <div class="card-body"><div class="row"><h4>BBQ Chicken &amp; Wings</h4><span class="price">Call for price</span></div><p class="d">Sauced chicken over a bed of Curly Q fries.</p>
+      <div class="more">Ask about today's chicken options and sauces when you call.</div><p class="tap">Tap for details</p></div></div>
+    <div class="card" data-cat="chicken"><div class="ph"><img src="images/fried-wings.jpg" alt="Tray of fried chicken" loading="lazy"></div>
+      <div class="card-body"><div class="row"><h4>Fried Wings &amp; Tenders</h4><span class="price">Call for price</span></div><p class="d">Crispy and golden.</p>
+      <div class="more">Great for trays and parties. Call ahead for larger orders.</div><p class="tap">Tap for details</p></div></div>
+    <div class="card" data-cat="burgers"><div class="ph"><img src="images/burger.jpg" alt="Holley's burger with Curly Q fries" loading="lazy"></div>
+      <div class="card-body"><div class="row"><h4>Burgers</h4><span class="price">$3 – $6.75</span></div><p class="d">Classic burgers at easy prices.</p>
+      <div class="more">Make it a combo with Curly Q fries.</div><p class="tap">Tap for details</p></div></div>
+    <div class="card" data-cat="burgers"><div class="ph"><img src="images/wings-curly.jpg" alt="Curly Q fries" loading="lazy"></div>
+      <div class="card-body"><div class="row"><h4>Curly Q Fries</h4><span class="price">Side</span></div><p class="d">The spiral fries that come with almost everything.</p>
+      <div class="more">Add them to any plate.</div><p class="tap">Tap for details</p></div></div>
+    <div class="card" data-cat="burgers"><div class="ph"><img src="images/mac.jpg" alt="Mac and cheese" loading="lazy"></div>
+      <div class="card-body"><div class="row"><h4>Mac &amp; Cheese</h4><span class="price">Side</span></div><p class="d">Creamy, cheesy comfort on the side.</p>
+      <div class="more">Pairs with any rib plate.</div><p class="tap">Tap for details</p></div></div>
+    <div class="card" data-cat="sweets"><div class="ph"><img src="images/cakes.jpg" alt="Slices of blue cake and red velvet cake" loading="lazy"><span class="tag">Must try</span></div>
+      <div class="card-body"><div class="row"><h4>Blue Cake &amp; Red Velvet</h4><span class="price">By the slice</span></div><p class="d">Bright blue cake and classic red velvet, packed to go.</p>
+      <div class="more">Desserts can sell out. Call to check what's in the case.</div><p class="tap">Tap for details</p></div></div>
+    <div class="card" data-cat="sweets"><div class="ph"><img src="images/pie.jpg" alt="Sweet potato pie slices" loading="lazy"></div>
+      <div class="card-body"><div class="row"><h4>Sweet Potato Pie</h4><span class="price">By the slice</span></div><p class="d">Smooth, spiced, Southern.</p>
+      <div class="more">Ask about whole pies for the holidays.</div><p class="tap">Tap for details</p></div></div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="heritage">
+    <img src="images/vintage.jpg" alt="Vintage photo of the original Holley's Bar-B-Q sign" loading="lazy">
+    <div>
+      <h3>A Moncrief Road Original</h3>
+      <p>Holley's has been feeding Jacksonville for generations. Ribs, tips and blue cake, done the Holley's way.</p>
+      <div class="st"><div><b>Generations</b><span>On Moncrief Rd</span></div><div><b>Tue–Sat</b><span>11 AM – 9 PM</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3 class="center">From the Pit &amp; the Window</h3>
+  <p class="sub center">Real photos from Holley's.</p>
+  <div class="gallery">
+    <img class="wide" src="images/hero.jpg" alt="Holley's Bar-B-Q building" loading="lazy">
+    <img src="images/window.jpg" alt="Holley's order window and menu board" loading="lazy">
+    <img src="images/ribs-grill.jpg" alt="Ribs on the pit" loading="lazy">
+    <img src="images/wings-curly.jpg" alt="Wings and Curly Q fries" loading="lazy">
+    <img src="images/cakes.jpg" alt="Blue cake and red velvet" loading="lazy">
+    <img src="images/pie.jpg" alt="Sweet potato pie" loading="lazy">
+    <img src="images/mac.jpg" alt="Mac and cheese" loading="lazy">
+    <img src="images/rib-tips.jpg" alt="Rib tips" loading="lazy">
+  </div>
+</section>
+
+<section id="visit">
+  <h3>Come Hungry</h3>
+  <p class="sub">Walk up to the window or call ahead and skip the wait.</p>
+  <div class="visit">
+    <div class="box"><strong>Hours</strong>
+      <table id="hours">
+        <tr data-d="2"><td>Tuesday</td><td>11 AM – 9 PM</td></tr>
+        <tr data-d="3"><td>Wednesday</td><td>11 AM – 9 PM</td></tr>
+        <tr data-d="4"><td>Thursday</td><td>11 AM – 9 PM</td></tr>
+        <tr data-d="5"><td>Friday</td><td>11 AM – 9 PM</td></tr>
+        <tr data-d="6"><td>Saturday</td><td>11 AM – 9 PM</td></tr>
+        <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+        <tr data-d="1"><td>Monday</td><td>Closed</td></tr>
+      </table>
+      <span id="status"></span>
+    </div>
+    <div class="box"><strong>Find Us</strong>
+      3604 Moncrief Rd<br>Jacksonville, FL 32209<br>
+      <a class="btn blue" href="https://www.google.com/maps/search/?api=1&query=Holley's+Bar-B-Q+3604+Moncrief+Rd+Jacksonville+FL+32209" target="_blank" rel="noopener">📍 Get Directions</a>
+      <br><a class="btn red" href="tel:9047685698">📞 (904) 768-5698</a>
+      <p style="margin-top:.9rem;font-size:.9rem">Facebook: <a href="https://www.facebook.com/holleysbbq/" target="_blank" rel="noopener" style="color:var(--blue)">@holleysbbq</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="slab">HOLLEY'S BAR-B-Q</p>
+  <p style="margin-top:.5rem">3604 Moncrief Rd, Jacksonville, FL 32209 • (904) 768-5698</p>
+  <p style="margin-top:.6rem">Mock site for demonstration • Not the official website</p>
+  <p style="margin-top:.4rem;font-size:.78rem;opacity:.7">Modern redesign concept. Photos are Holley's own, from holleysbbq.com and their public Yelp listing. See SOURCES.md.</p>
+</footer>
+
+<div class="call-bar"><a class="c" href="tel:9047685698">📞 Call Now • (904) 768-5698</a><a class="m" href="#menu">Menu</a></div>
+
+<script>
+document.querySelectorAll('.card').forEach(c=>c.addEventListener('click',()=>c.classList.toggle('open')));
+document.querySelectorAll('.filters button').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+  const f=btn.dataset.filter;document.querySelectorAll('#menu-grid .card').forEach(c=>c.style.display=(f==='all'||c.dataset.cat===f)?'':'none');}));
+(function(){const H={0:null,1:null,2:[11,21],3:[11,21],4:[11,21],5:[11,21],6:[11,21]};
+ const now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));const d=now.getDay(),h=now.getHours()+now.getMinutes()/60;
+ const row=document.querySelector('#hours tr[data-d="'+d+'"]');if(row)row.classList.add('today');
+ const s=document.getElementById('status'),p=document.getElementById('pill');const r=H[d];
+ if(r&&h>=r[0]&&h<r[1]){s.textContent='● Open now until 9 PM';s.style.color='#1e8a3c';p.textContent='● Open now'}
+ else{let nd=null;for(let i=0;i<8;i++){const k=(d+i)%7;if(H[k]&&(i>0||h<H[k][0])){nd=i===0?'today':i===1?'tomorrow':['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][k];break}}
+  s.textContent='● Closed now • Opens '+nd+' at 11 AM';s.style.color='#d62828';p.textContent='Closed • Opens '+(nd==='today'?'11 AM':nd==='tomorrow'?'tmrw 11 AM':nd.slice(0,3)+' 11 AM');p.classList.add('closed')}})();
+</script>
+</body>
+</html>
